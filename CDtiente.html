@@ -5,30 +5,47 @@
     <title>Chuyển đổi tiền tệ</title>
 </head>
 <body>
-<input type="text" id="dauvao">
-<select name="" id="vao">
-    <option value="a">VNĐ</option>
-    <option value="b">USD</option>
-</select>
-<select name="" id="ra">
-    <option value="a">VNĐ</option>
-    <option value="b">USD</option>
-</select>
-<button onclick="cd()">Tính</button>
+<table>
+    <tr>
+        <th>Số tiền</th>
+        <th>Từ</th>
+        <th>Đến</th>
+    </tr>
+    <tr>
+        <th><input type="text" id="dauvao"></th>
+        <th><select name="" id="vao">
+            <option value="a">VNĐ</option>
+            <option value="b">USD</option>
+        </select></th>
+        <th>
+            <select name="" id="ra">
+            <option value="a">VNĐ</option>
+            <option value="b">USD</option>
+        </select>
+        </th>
+        <th>
+            <button onclick="cd()">Tính</button>
+        </th>
+    </tr>
+</table>
+<br>
+<div id="ketqua">
+
+</div>
 <script>
     function cd() {
-    let dauvao = document.getElementById('dauvao').value;
-    let vao = document.getElementById('vao').value;
-    let ra = document.getElementById('ra').value;
-    if (vao == ra) {
-        alert(dauvao);
-    }
-    if (vao == "a" && ra == "b") {
-        alert("Tính ra số tiền là : " + dauvao/24000 + "USD");
-    }
-    if (vao =="b" && ra == "a") {
-        alert("Tính ra số tiền là : " + dauvao*24000 + "VNĐ");
-    }
+        let dauvao = document.getElementById('dauvao').value;
+        let vao = document.getElementById('vao').value;
+        let ra = document.getElementById('ra').value;
+        if (vao == ra) {
+            document.getElementById('ketqua').innerHTML = dauvao;
+        }
+        if (vao == "a" && ra == "b") {
+            document.getElementById('ketqua').innerHTML = "Tính ra số tiền là : " + dauvao / 24000 + "USD";
+        }
+        if (vao == "b" && ra == "a") {
+            document.getElementById('ketqua').innerHTML = "Tính ra số tiền là : " + dauvao * 24000 + "VNĐ";
+        }
     }
 </script>
 </body>

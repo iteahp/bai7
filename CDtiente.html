@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<input type="text" id="dauvao">
+<select name="" id="vao">
+    <option value="a">VNĐ</option>
+    <option value="b">USD</option>
+</select>
+<select name="" id="ra">
+    <option value="a">VNĐ</option>
+    <option value="b">USD</option>
+</select>
+<button onclick="cd()">Tính</button>
+<script>
+    function cd() {
+    let dauvao = document.getElementById('dauvao').value;
+    let vao = document.getElementById('vao').value;
+    let ra = document.getElementById('ra').value;
+    if (vao == ra) {
+        alert(dauvao);
+    }
+    if (vao == "a" && ra == "b") {
+        alert("Tính ra số tiền là : " + dauvao/24000 + "USD");
+    }
+    if (vao =="b" && ra == "a") {
+        alert("Tính ra số tiền là : " + dauvao*24000 + "VNĐ");
+    }
+    }
+</script>
+</body>
+</html>

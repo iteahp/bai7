@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<b>Bài 1 : Tính trung bình và tổng các môn học</b> <br>
+<button onclick="tbvatong()" >Ấn vào đây</button>
+<br>
+<br>
+<b>Bài 2 : Chuyến đổi từ độ C sang độ F</b><br>
+<button onclick="cdnhietdo()">Ấn vào đây</button>
+<br><br>
+<b>Bài 3 : Tính chu vi diện tích hình tròn</b><br><br>
+<b> Nhập Bán kính hình tròn : </b><br>
+<input type="number" id="r"> cm <br><br>
+
+<button onclick="cvdt()">Tính chu vi và diện tích hình tròn </button>
+<br>
+<div id="cv"></div>
+<div id="dt"></div>
+
+<script>
+    function tbvatong(){
+       let a = prompt ("Nhập điểm môn vật lý : ")
+       let  b = prompt("Nhập điểm môn hóa :")
+       let  c = prompt("Nhập điểm môn sinh học : ")
+        a = parseInt(a)
+        b = parseInt(b)
+        c = parseInt(c)
+
+        let  tong = a+b+c
+        let  tb = (tong)/3
+      alert("Điểm trung bình là : " + tb + " và điểm tổng là : " + tong )
+
+
+    }
+    function cdnhietdo()
+    {
+        let doc = prompt("Nhập độ C : ")
+        doc =parseInt(doc)
+        let dof = (doc/5)*9 +32;
+        alert("Độ F khi đã được chuyển đổi : " + dof)
+
+    }
+    function cvdt() {
+        let r = document.getElementById('r').value;
+        r = parseInt(r)
+        let pi = Math.PI
+        let cv = pi*2*r;
+        let dt = r*r*pi;
+        document.getElementById('cv').innerHTML = "Chu vi hình tròn : " + cv + ' cm';
+        document.getElementById('dt').innerHTML = "Diện tích hình tròn : " + dt + ' cm<sup>2</sup>';
+
+    }
+
+</script>
 </body>
+
+
 </html>

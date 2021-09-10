@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành biến và kiểu dữ liệu</title>
+</head>
+<body><b>Khai báo biến vào in biến</b> <br>
+<button onclick="show()">Ấn vào đây</button>
+<br>
+<br>
+<b>Diện tích hình chữ nhật với chiều dài = 20 và chiều rộng = 10</b><br>
+<button onclick="dt()">Ấn vào đây</button>
+<br><br>
+<b>Xét 2 số a và b được nhập vào </b><br>
+<button onclick="kt()">Ấn vào đây</button>
+
+<script>
+    function show() {
+        let i = 10;
+        let f = 20.5;
+        let b = true;
+        let s = 'Hà Nội';
+
+        document.write('i = ' + i);
+        document.write('<br/>');
+        document.write('f = ' + f);
+        document.write('<br/>');
+        document.write('b = ' + b);
+        document.write('<br/>');
+        document.write('s = ' + s);
+    }
+
+    function dt() {
+        let cc = 20
+        let cr = 10
+        let dt = cc * cr
+        document.write("Diện tích hình chữ nhật = " + dt)
+    }
+
+    function kt() {
+        let a = prompt(" Nhập a :")
+        let b = prompt(" Nhập b : ");
+        if (a % b == 0) {
+            alert("a chia hết cho b");
+        } else {
+            alert("a không chia hết cho b")
+        }
+
+
+    }
+</script>
+
+</body>
+</html>

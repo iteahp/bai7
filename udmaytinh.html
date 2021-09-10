@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<table>
+    <tr>
+        <th><b>Số thứ nhất</b></th>
+        <td><input type="number" id="so1"></td>
+    </tr>
+    <tr>
+        <th><b>Số thứ hai</b></th>
+        <td><input type="number" id="so2"></td>
+    </tr>
+    <tr>
+        <th colspan="2">
+            <button onclick="tinh1()">Cộng</button>
+            <button onclick="tinh2()">Trừ</button>
+            <button onclick="tinh3()">Nhân</button>
+            <button onclick="tinh4()">Chia</button>
+        </th>
+    </tr>
+
+</table>
+ <div id="ketqua">
+
+ </div>
+<script>
+    function tinh1() {
+        let a = +document.getElementById('so1').value;
+        let b = +document.getElementById('so2').value;
+        c = a + b
+        document.getElementById('ketqua').innerHTML = "Kết quả là : " + c;
+    }
+
+    function tinh2() {
+        let a = document.getElementById('so1').value;
+        let b = document.getElementById('so2').value;
+        c = a - b
+        document.getElementById('ketqua').innerHTML = "Kết quả là : " + c;
+    }
+
+    function tinh3() {
+        let a = document.getElementById('so1').value;
+        let b = document.getElementById('so2').value;
+        c = a * b
+        document.getElementById('ketqua').innerHTML = "Kết quả là : " + c;
+    }
+
+    function tinh4() {
+        let a = document.getElementById('so1').value;
+        let b = document.getElementById('so2').value;
+        c = a / b
+        document.getElementById('ketqua').innerHTML = "Kết quả là : " + c;
+    }
+</script>
 </body>
 </html>
